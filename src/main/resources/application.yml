@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+  console:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: group_id
+
+auto:
+  create:
+    topics:
+      enable: true
+
+kafka:
+  topic:
+    name: eighteleven.samples.topic
