@@ -14,7 +14,7 @@ spring:
     producer:
       bootstrap-servers: 127.0.0.1:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.letscode.banco.jms.AccountSerializer
       group-id: group_id
 
 auto:

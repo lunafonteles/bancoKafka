@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class ValidatorInfo {
-    private String name;
-    private String cpf;
+    private boolean winner;
 }

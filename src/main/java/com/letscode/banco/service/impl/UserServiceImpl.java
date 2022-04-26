@@ -22,15 +22,9 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setCpf(userRequest.getCpf());
         user.setName(userRequest.getName());
-        ValidatorInfo validator = getCpfValidator.execute();
-        if(validator.getCpf().isEmpty()) {
-            userRepository.save(user);
-            return user;
 
-        } else {
-            return null;
-            // TODO: mensagem kafka
-        }
+        userRepository.save(user);
+        return user;
     }
 
     @Override

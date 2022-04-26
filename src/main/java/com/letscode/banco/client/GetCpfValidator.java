@@ -12,7 +12,7 @@ public class GetCpfValidator {
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         HttpEntity<?> entity = new HttpEntity<>(headers);
         ResponseEntity<ValidatorInfo> validatorInfoResponseEntity =
-                restTemplate.exchange("http://localhost:9080/cpf/add", HttpMethod.GET,
+                restTemplate.exchange("http://localhost:9080/cpf/validator", HttpMethod.GET,
                         entity, ValidatorInfo.class);
 
         if (validatorInfoResponseEntity.getStatusCode().isError()){
